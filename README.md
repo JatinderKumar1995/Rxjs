@@ -29,3 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #Install bootstrap
 ng add @ng-bootstrap/ng-bootstrap
+
+
+npm install jquery --save
