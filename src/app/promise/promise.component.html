@@ -1,1 +1,14 @@
-<p>promise works!</p>
+<div class="promise">
+    <table>
+        <tr>
+            <th *ngFor="let i of index">{{i}}</th>
+        </tr>
+        <tr *ngFor="let post of posts">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.userId}}</td>
+            <td>{{post.body}}</td>
+
+        </tr>
+    </table>
+</div>

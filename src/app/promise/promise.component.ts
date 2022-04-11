@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../interfaces/post';
 import { Logger } from '../services/logger.service';
+import { PromiseService } from '../services/promise-service';
 
 @Component({
   selector: 'app-promise',
@@ -8,10 +10,17 @@ import { Logger } from '../services/logger.service';
 })
 export class PromiseComponent implements OnInit {
 
-  constructor(private logger : Logger) { }
+  index = ['id', 'title', 'userId', 'body'];
+  posts: Post[] = [];
+  constructor(private logger: Logger, private promiseService: PromiseService) { }
 
   ngOnInit(): void {
-    this.logger.log('tested');
+    this.promiseService.getJson().then(value => {
+      this.posts = value;
+      this.logger.log(JSON.stringify(value));
+    }).catch(err => {
+      this.logger.error(err);
+    })
   }
 
 }

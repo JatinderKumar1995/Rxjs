@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './includes/header/header.component';
 import { PromiseComponent } from './promise/promise.component';
 import { Logger } from './services/logger.service';
+import { PromiseService } from './services/promise-service';
+import { HttpWrapperService } from './services/http-wrapper-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,10 @@ import { Logger } from './services/logger.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule // for registering bootstrap modules
+    NgbModule, // for registering bootstrap modules
+    HttpClientModule // No provider for HttpClient!
   ],
-  providers: [Logger],
+  providers: [Logger,PromiseService,HttpWrapperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
