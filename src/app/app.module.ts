@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './includes/header/header.component';
+import { PromiseComponent } from './promise/promise.component';
+import { Logger } from './services/logger.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    PromiseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule // for registering bootstrap modules
   ],
-  providers: [],
+  providers: [Logger],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
