@@ -10,6 +10,7 @@ import { Logger } from './services/logger.service';
 import { PromiseService } from './services/promise-service';
 import { HttpWrapperService } from './services/http-wrapper-service';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule, // for registering bootstrap modules
-    HttpClientModule // No provider for HttpClient!
+    HttpClientModule, // No provider for HttpClient!
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true })
   ],
   providers: [Logger,PromiseService,HttpWrapperService],
   bootstrap: [AppComponent]

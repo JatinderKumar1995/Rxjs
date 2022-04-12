@@ -12,15 +12,16 @@ export class PromiseComponent implements OnInit {
 
   index = ['id', 'title', 'userId', 'body'];
   posts: Post[] = [];
-  constructor(private logger: Logger, private promiseService: PromiseService) { }
-
-  ngOnInit(): void {
+  constructor(private logger: Logger, private promiseService: PromiseService) {
     this.promiseService.getJson().then(value => {
       this.posts = value;
       this.logger.log(JSON.stringify(value));
     }).catch(err => {
       this.logger.error(err);
     })
+  }
+
+  async ngOnInit(): Promise<void> {
   }
 
 }

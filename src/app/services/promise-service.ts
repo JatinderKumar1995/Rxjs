@@ -8,7 +8,7 @@ export class PromiseService {
     constructor(private httpService:HttpWrapperService) {
     }
 
-    getJson(): Promise<Post[]> {
+    async getJson(): Promise<Post[]> {
         return this.httpService.get<Post[]>("https://jsonplaceholder.typicode.com/posts");
     }
 }

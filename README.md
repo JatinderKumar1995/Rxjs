@@ -32,3 +32,9 @@ ng add @ng-bootstrap/ng-bootstrap
 
 
 npm install jquery --save
+
+
+
+--------------------------------Async Await------------------------------------
+
+javascript -- whenever we use async ahead of a function then we get promise in return.
