@@ -1,0 +1,24 @@
+.list-group {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+.list-group-item {
+    background: #F7F7F7;
+    padding: 1em;
+    text-align: center;
+}
+
+// ul.list li a:hover {
+//     background: #e3f2fd;
+//     color: #477698;
+//     box-shadow: 0 0 60px #b3cada inset;
+//     text-decoration: none;
+// }
+ul.list li.list-group-item:hover {
+    background: #e3f2fd;
+    color: #477698;
+    box-shadow: 0 0 60px #b3cada inset;
+    text-decoration: none;
+}

@@ -12,13 +12,17 @@ import { HttpWrapperService } from './services/http-wrapper-service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { ObservableComponent } from './components/observable/observable.component';
+import { RxjsConceptListComponent } from './components/observable/rxjs-concept-list/rxjs-concept-list.component';
+import { FormEventComponent } from './components/observable/form-event/form-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PromiseComponent,
-    ObservableComponent
+    ObservableComponent,
+    RxjsConceptListComponent,
+    FormEventComponent
   ],
   imports: [
     BrowserModule,
