@@ -15,9 +15,7 @@ export class PromiseComponent implements OnInit {
   constructor(private logger: Logger, private promiseService: PromiseService) {
     this.promiseService.getJson().then(value => {
       this.posts = value;
-      this.logger.log(JSON.stringify(value));
     }).catch(err => {
-      this.logger.error(err);
     })
   }
 

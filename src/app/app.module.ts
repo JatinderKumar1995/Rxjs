@@ -11,12 +11,14 @@ import { PromiseService } from './services/promise-service';
 import { HttpWrapperService } from './services/http-wrapper-service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+import { ObservableComponent } from './components/observable/observable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PromiseComponent
+    PromiseComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
